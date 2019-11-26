@@ -10,9 +10,11 @@ Facebook app developers have been using both the new concurrent mode API and the
 
 ## The problem
 
-The React team has gotten feedback from Facebook developers that concurrent mode and priorities can be confusing to debug, since browser profiling tools don't yet have any concept of scheduled/prioritized work. It's all just a flat stream of events.
+React DevTools provides a [React-specific profiler](https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html) that highlights components that take a long time to render or that render unexpectedly. We have traditionally relied on built-in browser profiling tools to dig deeper on CPU bottlenecks (e.g. which specific function calls are slow) and IO bottlenecks (e.g. which network requests are taking a long time to resolve).
 
-The React team has begun work on a prototype profiler that shows the priority JavaScript is running at, along with several key React events (e.g. work is scheduled, a component [“suspended"](https://reactjs.org/docs/react-api.html#suspense), the DOM was mutated). Such a profiler could be [extremely basic](https://twitter.com/brian_d_vaughn/status/1192485930638041088) but would likely be of limited use if it were missing so much surrounding context. A compelling MVP would probably need to include more contextual information (e.g. a script flame graph, network traffic, user input events, maybe even screenshots). Reimplementing these native profiling views would be a lot of effort. It would also be work that would not benefit other frameworks.
+With new APIs like concurrent mode and scheduler, there is a gap between framework tooling and existing browser tooling. The built-in tools don't yet have any concept of scheduled/prioritized work. It's all just a flat stream of events. Because of this, Facebook developers working with the these APIs have shared feedback that it can be difficult to identify performance bottlenecks.
+
+To address this issue, the React team has begun work on a prototype profiler that shows the priority JavaScript is running at, along with several key React events (e.g. work is scheduled, a component [“suspended"](https://reactjs.org/docs/react-api.html#suspense), the DOM was mutated). Such a profiler could be [extremely basic](https://twitter.com/brian_d_vaughn/status/1192485930638041088) but would likely be of limited use if it were missing so much surrounding context. A compelling MVP would probably need to include more contextual information (e.g. a script flame graph, network traffic, user input events, maybe even screenshots). Reimplementing these native profiling views would be a lot of effort. It would also be work that would not benefit other frameworks.
 
 ## The proposal
 
@@ -45,6 +47,7 @@ We’ve spoken with developers from Angular, Preact, and Vue to see if they woul
 React DevTools already provide some [profiling capabilities](https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html). We could implement this new profiling view as part of the main extension UI. However there are a few downsides to this approach:
 
 * It would require substantial duplicated effort to re-implement native profiler UIs (e.g. flame graph, network traffic).
+* Although both store data using the [Trace Event format](https://docs.google.com/document/d/1CvAClvFfyA5R-PhYUmn5OOQtYMH4h6I0nSsKchNAySU/preview), differences between profiling data recorded by e.g. Chrome and Firefox would require separate parsing logic.
 * The current extension APIs are insufficient to enable syncing the currently visible section of profiling data (which time range has been zoomed into) between the Performance tab and the React DevTools extension.
 * Having to manually flip between tabs would add substantial context switching cost for developers without a good justification.
 
