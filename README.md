@@ -28,7 +28,14 @@ This API would probably need to provide the following:
 * The extension would have access to the current Trace Events data being viewed in the profiling panel.
 * The extension would receive events specifying the currently visible time range (where the user has zoomed in and scrolled to).
 
-Here’s a rough mockup showing the current React profiling prototype rendered inline within the Performance tab. (Note that the two JavaScript profiles being shown don’t line up.)
+
+### Mockups
+
+Here's a video demo of an integration of the current React profiling prototype with the [Firefox profiler](https://github.com/firefox-devtools/profiler).
+
+![Low-res preview of integration with Firefox profiler](https://user-images.githubusercontent.com/29597/69925863-fd4e0a00-14a9-11ea-979f-f70e25daddbf.gif)
+
+And here’s a rough mockup showing the current React profiling prototype rendered inline within the Performance tab. (Note that the two JavaScript profiles being shown don’t line up.)
 
 ![Mockup screenshot of custom inline profile view](https://raw.githubusercontent.com/bvaughn/extensions-api-proposal-custom-performance-pane/master/mockup.png)
 
