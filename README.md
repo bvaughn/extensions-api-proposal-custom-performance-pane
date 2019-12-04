@@ -31,13 +31,17 @@ This API would probably need to provide the following:
 
 ### Mockups
 
-Here's a video demo of an integration of the current React profiling prototype with the [Firefox profiler](https://github.com/firefox-devtools/profiler). (The source code for this integration can be found [here](https://github.com/bvaughn/profiler/tree/react-devtools-poc).)
+Here’s a mockup that illustrates the region I am proposing an extension might be able to render custom UI into:
 
-![Low-res preview of integration with Firefox profiler](https://user-images.githubusercontent.com/29597/70157534-aadd3b00-16ad-11ea-866b-8d4548ec6a79.gif)
+![Mockup screenshot of proposed custom canvas area](https://user-images.githubusercontent.com/29597/70170281-4e394a80-16c4-11ea-970d-42b44bbb82e3.png)
 
-And here’s a rough mockup showing the current React profiling prototype rendered inline within the Performance tab. (Note that the two JavaScript profiles being shown don’t line up.)
+And here’s a mockup showing the current React profiling prototype rendered inline within that area. (Note that the two JavaScript profiles being shown don’t line up.)
 
 ![Mockup screenshot of custom inline profile view](https://raw.githubusercontent.com/bvaughn/extensions-api-proposal-custom-performance-pane/master/mockup.png)
+
+Here's a video demo of an integration of the React profiling prototype with the [Firefox profiler](https://github.com/firefox-devtools/profiler). (The source code for this integration can be found [here](https://github.com/bvaughn/profiler/tree/react-devtools-poc).)
+
+![Low-res preview of integration with Firefox profiler](https://user-images.githubusercontent.com/29597/70157534-aadd3b00-16ad-11ea-866b-8d4548ec6a79.gif)
 
 ## Would other frameworks use this?
 
