@@ -33,7 +33,7 @@ This API would probably need to provide the following:
 
 Here's a video demo of an integration of the current React profiling prototype with the [Firefox profiler](https://github.com/firefox-devtools/profiler). (The source code for thie integration can be found [here](https://github.com/bvaughn/profiler/tree/react-devtools-poc).)
 
-![Low-res preview of integration with Firefox profiler](https://user-images.githubusercontent.com/29597/69925863-fd4e0a00-14a9-11ea-979f-f70e25daddbf.gif)
+![Low-res preview of integration with Firefox profiler](https://user-images.githubusercontent.com/29597/70157534-aadd3b00-16ad-11ea-866b-8d4548ec6a79.gif)
 
 And here’s a rough mockup showing the current React profiling prototype rendered inline within the Performance tab. (Note that the two JavaScript profiles being shown don’t line up.)
 
