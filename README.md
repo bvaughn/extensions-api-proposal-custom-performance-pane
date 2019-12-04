@@ -18,7 +18,7 @@ To address this issue, the React team has begun work on a prototype profiler tha
 
 ## The proposal
 
-Follow the precedent set by other native panels (e.g. [`ElementsPanel`](https://developer.chrome.com/extensions/devtools_panels#type-ElementsPanel), [`SourcesPanel`](https://developer.chrome.com/extensions/devtools_panels#type-SourcesPanel)) and allowed an extension to create its own “pane” (canvas) within the Performance tab. This would enable frameworks like React to display important context inline- in much the same way as the browser current does for things like screenshots and network requests.
+Follow the precedent set by other native panels (e.g. [`ElementsPanel`](https://developer.chrome.com/extensions/devtools_panels#type-ElementsPanel), [`SourcesPanel`](https://developer.chrome.com/extensions/devtools_panels#type-SourcesPanel)) and allow an extension to create its own “pane” (canvas) within the Performance tab. This would enable frameworks like React to display important context inline- in much the same way as the browser current does for things like screenshots and network requests.
 
 This API would probably need to provide the following:
 
@@ -31,7 +31,7 @@ This API would probably need to provide the following:
 
 ### Mockups
 
-Here's a video demo of an integration of the current React profiling prototype with the [Firefox profiler](https://github.com/firefox-devtools/profiler). (The source code for thie integration can be found [here](https://github.com/bvaughn/profiler/tree/react-devtools-poc).)
+Here's a video demo of an integration of the current React profiling prototype with the [Firefox profiler](https://github.com/firefox-devtools/profiler). (The source code for this integration can be found [here](https://github.com/bvaughn/profiler/tree/react-devtools-poc).)
 
 ![Low-res preview of integration with Firefox profiler](https://user-images.githubusercontent.com/29597/70157534-aadd3b00-16ad-11ea-866b-8d4548ec6a79.gif)
 
