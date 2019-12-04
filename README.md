@@ -31,7 +31,7 @@ This API would probably need to provide the following:
 
 ### Mockups
 
-Here's a video demo of an integration of the current React profiling prototype with the [Firefox profiler](https://github.com/firefox-devtools/profiler).
+Here's a video demo of an integration of the current React profiling prototype with the [Firefox profiler](https://github.com/firefox-devtools/profiler). (The source code for thie integration can be found [here](https://github.com/bvaughn/profiler/tree/react-devtools-poc).)
 
 ![Low-res preview of integration with Firefox profiler](https://user-images.githubusercontent.com/29597/69925863-fd4e0a00-14a9-11ea-979f-f70e25daddbf.gif)
 
